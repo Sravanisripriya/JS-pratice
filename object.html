@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+       // var items={
+    //         poori:20,
+    //         idly:10,
+    //         dosa:10
+    //     }
+    //     var bill={
+    //         poori:2,
+    //         idly:3,
+    //         dosa:5
+    //     }
+    // var total=0;
+    //     for(var k in items)
+    //      total=total+(items[k])*(bill[k])
+    //     {
+    //         console.log(total) 
+    //     }
+      
+    // //     var person = {
+    //                     "firstName" : "Harry",
+    //                     "lastName" : "Potter",
+    //                     "age": 30,
+    //                     "gender": "male",
+    //                     "skill" : "ReactJS",                                
+    //                     "expertise": "Beginner"
+    //                         }
+// Print the firstname
+//       console.log(person["firstName"]) 
+
+//  //   Print the lastname   
+//     console.log(person["lastName"])  
+
+//    // Print the fullname("Harry Potter")
+// console.log(person["firstName"]+" "+person["lastName"])
+
+//If the age is less than 18, then print "false". If the age is more than 18, then print "true" 
+// if(person["age"]>18){
+//     console.log(true)
+// }
+// else{
+//     console.log(false)
+//}
+
+// var marks = {
+//              "maths" : 34,
+//              "english" : 56,
+//              "science": 32,
+//              "hindi" : 75,
+//              "social science": 65
+//    }
+     
+// //Print the marks of all the subjects.
+// for(var k in marks){
+//     console.log(marks[k])  
+// }
+// //Print the names of all the subjects from the given object.
+// for(var k in marks){
+//     console.log(k)
+// }                
+// //Count the number of subjects from the given object.
+// count=0
+// for(var k in marks){
+//     count++
+// }
+// console.log(count);
+// //Print the percentage of the marks of the student
+// sum=0
+// count=0
+// for(var k in marks){
+//     sum=sum+(marks[k])
+//     count++
+// // }
+// // var actualmarks=count*100
+// //   console.log(sum/actualmarks*100)
+  
+// //   //Print only those subjects where the student scored more than 35
+// //   for(var k in marks){
+// //     if(marks[k]>35){
+// //         console.log(k)
+// //     }
+// //   }
+  //Print the pass/fail status of the subjects provided 35 is the pass mark.
+//   for(var k in marks){
+//     if(marks[k]>=35){
+//         console.log(k, marks[k],"pass" );
+//     }
+//     else{
+//         console.log(k,marks[k],"fail")
+//     }
+//   }
+//  // Print only the passed subjects
+//  for(var k in marks){
+//     if(marks[k]>35){
+//          console.log(k)
+//      }
+ //}
+//  //Count the number of passed subjects.
+//  var count=0;
+//  for(var k in marks){
+//     if(marks[k]>35){
+//         count++
+//     }
+//  }
+ //console.log(count)
+//  //Print only the failed subjects
+//  for(var k in marks){
+//     if(marks[k]<35){
+//         console.log(k)
+//     }
+//  }
+ //count the number of failed subjects
+//   var count=0;
+//   for(var k in marks){
+//     if(marks[k]<35){
+//         count++
+//     }
+//   }
+//   console.log(count)
+
+
+
+var marks = {
+             "maths" : 34,
+             "english" : 56,
+             "science": 32,
+             "hindi" : 75,
+             "social science": 65
+   }
+
+
+//Print the least scored subject
+var least=Infinity
+for(var k in marks){
+  marks[k]<least?least=marks[k]:least=least
+}
+console.log(least)
+
+//Print the highest scored subject
+ var highest=-Infinity
+ var result
+ var sub;
+for(var k in marks){
+  marks[k]>highest?(highest=marks[k] &&(sub=k)):(highest=highest&&(sub=k))
+  result=k
+}
+ console.log(highest,sub,'result')
+
+//Check whether the student has passed in all the subjects or not.
+    // var count=0;
+    // var pass=0
+    // for(var k in marks){=
+    //   pass++
+    //   if(marks[k]>35){
+    //     count=count+1
+    //   }
+    // }
+    //   if(count==pass){
+    //     console.log("pass")
+    //   }
+    //   else{
+    //     console.log("fail")
+    //   }
+      //Take the subject name from the student through prompt box and print the subject marks and pass/fail status.
+
+    var res='passed'
+    for(var eachItem in marks){
+      if(marks[eachItem]<35){
+        res='failed'
+      }
+    }
+    console.log(res)
+
+   </script>
+ </body>
+</html>

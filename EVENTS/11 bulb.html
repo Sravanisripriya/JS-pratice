@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+       <body style="text-align:center">
+         <h1>show bulb on and off img using toggle button</h1>
+
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbpoKBg_Yb3EzGYJP5vn5cvSjwEkj-d-ug0w&usqp=CAU" id="a2" style="width:100px">
+        
+    
+         <div style="text-align:center">
+        <button id="a1" onclick="on()" style="background-color: orange;">ON</button>
+        </div>
+         <hr><hr>
+         <div>
+         
+
+
+        <script>
+          var x=document.getElementById("a1")
+          var y=document.getElementById("a2")
+        function on(){
+            if(x.innerHTML==="ON"){
+              y.src="https://images.freeimages.com/images/large-previews/07c/light-bulb-2-1427493.jpg?fmt=webp&w=500"
+              x.innerHTML="OFF"
+            }
+            else{
+              y.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbpoKBg_Yb3EzGYJP5vn5cvSjwEkj-d-ug0w&usqp=CAU"
+              x.innerHTML="ON"
+            }
+        }
+
+        </script>
+    </body>
+</html>

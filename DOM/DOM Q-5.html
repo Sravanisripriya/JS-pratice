@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="ab2"></div>
+
+    <div id="ab1"></div>
+
+    <script>
+//1 Create one h1 element and put some text into it.
+      var a=document.createElement("h1")
+      a.innerHTML="Hello DOM World"
+      console.log(a)
+document.body.appendChild(a)
+
+//2  h1  ki apply red font color to it
+a.style.color='red'
+
+//3. Take an array of names and create a list from it.
+var ar=["tinnu","kinnu","munnu","binnu"]
+for(var i=0;i<=ar.length-1;i++){
+  var newli=document.createElement("li")
+  newli.innerHTML=ar[i]
+  console.log(newli)
+  document.getElementById("ab2").appendChild(newli)
+}
+
+//6
+    //   var favhero=["https://resize.indiatvnews.com/en/resize/newbucket/1080_-/2023/10/prabhas-12-1698043607.jpg",
+    //                    "https://i.pinimg.com/736x/07/c3/f2/07c3f2414504ca32842409f1a14d725d.jpg",
+    //                    "https://m.economictimes.com/thumb/msid-92570973,width-1200,height-900,resizemode-4,imgsize-46526/aditya-roy-kapur.jpg"
+    //                  ]
+    //  favhero.forEach(function(f){
+    //  var newimg=document.createElement("img")
+    //  newimg.src=f
+    //  newimg.style.width="500px"
+    //  newimg.style.height="500px"
+    // document.getElementById("ab1").appendChild(newimg)
+    // })
+              
+
+    </script>
+</body>
+</html>

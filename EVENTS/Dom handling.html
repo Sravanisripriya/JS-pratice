@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="a1">SRAVANI</h1>
+        <h1 id="b1">TANUJA</h1>
+        <h1 id="c1">PETERSON</h1>
+        <h1>MAHA</h1>
+        <h1>BINDU</h1>
+        <p class="abc">so beautiful</p>
+        <p class="abc">so elegant</p>
+        <P>just looking like a wow</P>
+<script>
+    //apply color to single element
+    var a=document.getElementById("a1")
+    a.style.color="blue"
+    document.getElementById("b1").style.color="red"
+
+    // content changing
+    var c=document.getElementById("c1")
+    c.innerHTML=" peterson hena"
+
+    //color to all p elements
+    var x=document.querySelectorAll("p")
+    x.forEach(function(el){
+        el.style.color="brown"
+
+        // // border 
+        var y=document.querySelectorAll("h1")
+        y.forEach(function(el){
+            el.style.border="2px solid green"
+
+            //diff colors for each border
+            var q=[pink, skyblue, yellow]
+            var z=document.querySelectorAll(".abc")     
+            z.forEach(function(ele,i){
+              ele.style.border="3px blue"
+              ele.style.color=q[i]
+            })
+
+        })
+
+    })
+</script>
+    </body>
+</html>

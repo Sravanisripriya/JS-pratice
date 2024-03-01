@@ -1,0 +1,115 @@
+<html>
+    <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        </head>
+    <body>
+     <button onclick="sortAsc()">A-Z</button>
+     <button onclick="sortDes()">Z-A</button>
+     <input type="text" placeholder="search" onkeyup="search()" id="searchbox">
+
+
+       <table border="2">
+         <thead>
+          <tr>
+            <th>Name</th>
+            <th>Capital</th>
+            <th>Region</th>
+            <th>SubRegion</th>
+            <th>Flag</th>
+          </tr>
+         </thead>
+        <tbody id="d1">
+        </tbody>
+       </table>
+
+
+      <script>
+       var tbd=document.getElementById("d1")
+  
+        var countries=[]
+
+        axios.get("https://restcountries.com/v3.1/all").then(function(res){
+        // console.log(res.data[0])
+            countries=res.data
+        //  console.log(countries)
+         createTable(countries)
+        })
+
+        function sortAsc(){
+            countries.sort(function(a,b){
+                var fn1=a.name.common.toLowerCase();
+                var fn2=b.name.common.toLowerCase();
+                if(fn1>fn2){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+        
+        createTable(countries)
+        }
+
+               
+        function sortDes(){
+            countries.sort(function(a,b){
+                var fn1=a.name.common.toLowerCase();
+                var fn2=b.name.common.toLowerCase();
+               
+                if(fn1<fn2){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+        
+        createTable(countries)
+    }
+     function search(){
+        var filteredcountries=countries.filter(function(country){
+            return (country.name.common.toLowerCase().startsWith(searchbox.value.toLowerCase()))
+        })
+        createTable(filteredcountries)
+     }
+
+         function createTable(arr){
+            tbd.innerHTML=""
+          arr.forEach(function(a){
+
+            var newtr=document.createElement("tr")
+  
+            var td1=document.createElement("td")
+            td1.innerHTML=a.name.common
+            newtr.appendChild(td1)
+            
+            var td2=document.createElement("td")
+            td2.innerHTML=a.capital
+            newtr.appendChild(td2)
+
+            var td3=document.createElement("td")
+            td3.innerHTML=a.region
+            newtr.appendChild(td3)
+
+            var td4=document.createElement("td")
+            td4.innerHTML=a.subregion
+            newtr.appendChild(td4)
+
+            var td5=document.createElement("td")  
+
+            var newimg=document.createElement("img")
+            newimg.src=a.flags.png
+            newimg.style.width="100px"
+            td5.appendChild(newimg)
+            newtr.appendChild(td5)
+
+            tbd.appendChild(newtr)
+
+          })
+        }
+         
+        
+
+      </script>     
+    </body>
+</html>

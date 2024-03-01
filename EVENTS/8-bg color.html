@@ -1,0 +1,30 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+      <h1>Like and Dislike buttons</h1>
+      <div>
+      <button style="background-color:rgb(77, 230, 77); margin-right: 10px;"  onclick="inc1()">Like</button><span id="a1"></span>
+      </div>
+      <br>
+      <div>
+      <button style="background-color: red; margin-right: 10px;"  onclick="inc2()">Dislike</button><span id="a2"></span>
+    </div>
+        <script>
+      var a=0
+      var b=0
+     document.getElementById("a1").innerHTML=a  
+     document.getElementById("a2").innerHTML=b
+     function inc1(){
+        a++
+        document.getElementById("a1").innerHTML=a
+     }
+    function inc2(){
+        b++
+        document.getElementById("a2").innerHTML=b
+
+     }
+        </script>
+    </body>
+</html>

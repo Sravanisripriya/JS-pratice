@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <table border="2px solid">
+            <tr>
+                <th>title</th>
+                <th>category</th>
+                <th>description</th>
+                <th>price</th>
+                <th>image</th>
+            </tr>
+
+            <tbody id="tbd"></tbody>
+        </table>
+        <script>
+            var tbody=document.getElementById("tbd")
+            var products=[]
+           axios.get('https://fakestoreapi.com/products').then(function(res){
+           products=res.data;
+           createUI(products)
+    //    console.log(products[0])
+  })
+    //  create funtion to generate things
+        function createUI(pdata){
+        pdata.forEach(function(product){
+            var newtr=document.createElement("tr")
+          
+            var td1=document.createElement("td")
+            td1.innerHTML=product.title
+            newtr.appendChild(td1)
+
+            var td2=document.createElement("td")
+            td2.innerHTML=product.category
+            newtr.appendChild(td2)
+
+            var td3=document.createElement("td")
+            td3.innerHTML=product.description
+            newtr.appendChild(td3)
+
+            var td4=document.createElement("td")
+            td4.innerHTML=product.price
+            newtr.appendChild(td4)
+
+            var td5=document.createElement("td")
+           var prodimg=document.createElement("img")
+           prodimg.src=product.image
+           prodimg.style.width="70px"
+           td5.appendChild(prodimg)
+           newtr.appendChild(td5)
+
+           tbody.appendChild(newtr)
+        })
+
+    } 
+           
+        </script>
+    </body>
+</html>

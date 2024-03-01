@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        
+        <h1 style="color:red">Add students</h1>
+        <input type="text" id="a1">
+        <button onclick="add()" style=" background-color:orange ;">Add students</button>
+        <ul id="a2"></ul>
+
+    <script>
+    var x=document.getElementById("a1")
+    var y=document.getElementById("a2")
+     var z=[]
+    function add(){
+        y.innerHTML=""
+        z.push(x.value)
+        z.forEach(function(ar){
+            var newli=document.createElement("li")
+            newli.innerHTML=ar
+            y.appendChild(newli)
+        })
+ }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <h1>change div background using toggle button</h1>
+    <div id="a1" style="height:100px; width:100px; border:2px solid; background-color:white"></div><br>
+    <button  id="a2"style="background-color:orange;" onclick="change()">Toggle</button>
+
+
+        <script>
+         var x=document.getElementById("a1")
+         var y=document.getElementById("a2")
+         function change(){
+            if(x.style.backgroundColor==="white"){
+                x.style.backgroundColor="orange"
+            }
+            else{
+                x.style.backgroundColor="white"
+            }
+         }
+ 
+
+
+
+
+
+        </script>
+    </body>
+</html>

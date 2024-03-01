@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+
+    <div>
+       <center>
+        <img src="https://cdn.cdnparenting.com/articles/2019/02/07115103/393732661-H-1024x700.webp" style="height:100;width:100px" onmouseover="over(event)">
+        <img src="https://syta.org/wp-content/uploads/2018/10/underwater-beauty-web.jpg" style="height:100; width:100px" onmouseover="over(event)">
+        <img src="https://images1.ratemyfishtank.com/articlephoto/447/The-Oldest-Aquarium-Fish-66v0vofyvg8w4kg8c0c0sko44-910.jpg" style="height:100;width:100px" onmouseover="over(event)">
+       </center>
+    </div>
+    <div id="a1"></div>
+
+        <script>
+            function over(e){
+                var x=document.getElementById("a1")
+                x.innerHTML=""
+           var y=document.createElement("img")
+           y.src=""
+           y.src=e.target.src
+           console.log(y)
+           y.style.height="100px"
+           y.style.width="100px"
+         x.appendChild(y)
+
+            }
+
+        </script>
+    </body>
+</html>

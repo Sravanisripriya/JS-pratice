@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+    <h1 id="a1"></h1>
+    <button onclick="ab()">Add Text</button>
+    <br><br>
+    
+
+       <!-- (2) -->
+    <div style="width:300px;height:300px;border:3px solid" id="a2" > </div>
+    <button onclick="black()">black</button>
+    <button onclick="grey()">grey</button>
+    <button onclick="blue()">blue</button>
+    <button onclick="reset()">reset</button>
+     
+
+    <script>
+        function ab(){
+            var b=document.getElementById("a1")
+            b.innerHTML="welcome"
+        }
+
+        //color change on button click
+        var a=document.getElementById("a2")
+         
+        function black(){
+            a.style.background="black"
+        }
+
+        function grey(){
+            a.style.background="grey"
+        }
+
+        function blue(){
+            a.style.background="blue"
+        }
+
+        function reset(){
+            a.style.background=""
+        }
+
+
+    </script>
+</body>
+</html>

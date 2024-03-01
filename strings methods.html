@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var ar="honey"
+console.log(ar.at(-4))
+console.log(ar.charAt(4))
+console.log(ar.charCodeAt(4))
+console.log(ar.endsWith("y"))
+ console.log(ar.startsWith("e"))
+ // concat
+var b1="sun"
+var b2="moon"
+console.log(b1.concat(' ',b2));
+console.log(b2.concat(',',b1))
+
+console.log(String.fromCharCode(99));
+console.log(String.fromCodePoint(999,10000,6969));
+
+//include
+var c="zindagi hii" 
+console.log(c.indexOf("g")) 
+
+ var d= "you will get more and more"        
+console.log(d.lastIndexOf('more'))
+//=console.log(d.startIn)
+
+//var str="honey"
+// var ar1=str.split('')
+// var ar2=ar1.reverse()
+// var str1=ar2.join("")
+// console.log(str1)
+
+//padEnd
+var str1="fruits and vegetables"
+console.log(str1.padEnd(str1.length+10, '.'));
+console.log(str1.padStart(str1.length+10,"."))
+
+// repeat
+var str2= "i love my friends!"
+var str3= str2.slice(length-8)
+
+console.log("i love my "+str3.repeat(3));
+//////or///
+var str4 ="happy "
+console.log("i am"+ str4.repeat(3))
+
+var a="i love plk"
+console.log(a.replace("plk","Hyd"))
+console.log(a)
+var b=(a.replace("plk","Hyd"))
+console.log(b)
+ </script>
+ </body>
+</html>

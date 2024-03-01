@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Print the texts inside the h1 and h2 elements in the console. -->
+<h1 class="a">Hello</h1>
+<h2 class="a">Edupoly</h2>
+<p class="b">Training</p> 
+                              <hr>
+<!-- Store the texts of each li element in an array. -->
+<ul>
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Orange</li>
+ </ul>
+                              <hr>
+
+<!-- Print the text inside the first paragraph element in the console. -->
+
+<h1>Hello</h1>
+<p>Edupoly</p>
+<p>Training</p>
+<p>Something</p>
+<script>
+    //2
+    // var a=document.getElementsByClassName("a")
+    // console.log(a)
+    // for (i=0;i<=a.length-1;i++){
+    //     console.log(a[i].innerHTML)
+    // }
+
+    //3
+    var b= document.getElementsByTagName("li")
+    console.log(b)
+    var d=[]
+    for(i=0;i<=b.length-1;i++){
+       console.log(b[i].innerHTML)
+    }
+    for(i=0;i<=b.length-1;i++){
+    d.push(b[i].innerHTML)
+    }
+    console.log(d)
+
+
+    // //4
+    // var c=document.getElementsByTagName("p") 
+    // console.log(c)   
+    // console.log(c[1].innerHTML)
+
+</script>
+</body>
+</html>

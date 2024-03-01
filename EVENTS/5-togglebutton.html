@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+       <h1 align="center">Toggle button to show true or false</h1>
+       <button onclick="toggle()" style="background-color:orange">toggle</button><span id="a2">true</span>
+
+        <script>
+        var b=document.getElementById("a2")
+        function toggle(){
+            if( b.innerHTML==="true"){
+              b.innerHTML="false"
+            }
+   else{
+       b.innerHTML="true"
+   }
+
+ }
+        </script>
+    </body>
+</html>
